@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "550644052185",
+    "project_id": "transit-one",
+    "storage_bucket": "transit-one.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550644052185:android:513aada2776e78aa33cec8",
+        "android_client_info": {
+          "package_name": "com.example.transitone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9JM26e7px6x9N1fcF8KJDEkPFlM21cUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

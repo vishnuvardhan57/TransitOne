@@ -2,6 +2,8 @@ package com.example.transitone;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -9,8 +11,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import com.example.transitone.databinding.ActivityDashboardBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -39,12 +43,30 @@ public class Dashboard extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.profile) {
                     replaceFragment(new profile());
                     return true;
-                } else if (item.getItemId() == R.id.login) {
-                    replaceFragment(new login());
-                    return true;
                 } else {
                     return false;
                 }
+            }
+        });
+
+        binding.navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_route) {
+                    replaceFragment(new route());
+                    return true;
+                } else if (item.getItemId() == R.id.nav_fav) {
+                    replaceFragment(new favorites());
+                } else if (item.getItemId() == R.id.nav_notify) {
+                    replaceFragment(new notification());
+                } else if (item.getItemId() == R.id.nav_feed) {
+                    replaceFragment(new feedback());
+                } else if (item.getItemId() == R.id.nav_about) {
+                    replaceFragment(new about());
+                } else {
+                    return false;
+                }
+            return true;
             }
         });
 
@@ -60,3 +82,5 @@ public class Dashboard extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 }
+
+

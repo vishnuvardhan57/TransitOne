@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_route"
+            android:title="route"
+            android:icon="@drawable/transit_route"/>
+
+        <item
+            android:id="@+id/nav_fav"
+            android:title="fav"
+            android:icon="@drawable/favorites"/>
+
+        <item
+            android:id="@+id/nav_notify"
+            android:title="notify"
+            android:icon="@drawable/notifications"/>
+
+        <item
+            android:id="@+id/nav_feed"
+            android:title="feed"
+            android:icon="@drawable/feedback"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:title="about"
+            android:icon="@drawable/about"/>
+
+    </group>
+
+
+</menu>
